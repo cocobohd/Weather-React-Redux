@@ -1,0 +1,19 @@
+.details {
+  font-size: 30px;
+  color: rgb(163, 162, 162);
+  cursor: default;
+}
+.details h3 {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.details--info {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  align-items: center;
+}
+.details--stat {
+  color: white;
+}

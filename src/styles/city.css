@@ -1,0 +1,19 @@
+.city {
+  margin-top: 40px;
+  font-size: 30px;
+  color: rgb(163, 162, 162);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.city p {
+  width: 40%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+
+.city p:hover {
+  color: white;
+}

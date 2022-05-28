@@ -1,0 +1,33 @@
+.weather {
+  padding: 110px 0 110px 110px;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  flex-direction: column;
+  color: white;
+  cursor: default;
+}
+
+.weather--title {
+  font-size: 40px;
+}
+
+.weather--current {
+  display: flex;
+  align-items: center;
+}
+
+.weather--c {
+  font-size: 120px;
+  padding-right: 20px;
+}
+
+.weather--city {
+  font-size: 67px;
+  line-height: 45px;
+  font-weight: 400;
+}
+
+.weather--date {
+ font-size: 18px;
+}
