@@ -11,7 +11,8 @@ const defaultState = {
   day: "",
   month: "",
   dayNum: 0,
-  condition: "Sunny"
+  condition: "Sunny",
+  back: ''
 }
 
 export const mainReducer = (state = defaultState, action) => {
@@ -28,10 +29,10 @@ export const mainReducer = (state = defaultState, action) => {
         wind_kph: action.wind_kph,
         precip_mm: action.precip_mm,
         humidity: action.humidity,
-        condition: action.condition
+        condition: action.condition,
+        back: action.back
       }
     case CHANGE_LOCATION:
-      console.log(state)
       return {
         ...state,
         location: action.location

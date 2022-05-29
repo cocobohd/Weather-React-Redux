@@ -1,11 +1,17 @@
 .info {
   width: 40%;
+  right: -750px;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(12px);
   position: relative;
   padding: 99px 80px;
+  transition: 1s all;
 }
+.info:hover {
+  right: 0;
+}
+
 .input {
   font-size: 30px;
   color: rgb(245, 244, 244);

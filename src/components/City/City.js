@@ -16,6 +16,8 @@ export default function City() {
       <p onClick={() => changeWeather("Berlin")}>Berlin</p>
       <p onClick={() => changeWeather("Kiev")}>Kiev</p>
       <p onClick={() => changeWeather("Dublin")}>Dublin</p>
+      <p onClick={() => changeWeather("Lviv")}>Lviv</p>
+      <p onClick={() => changeWeather("New-York")}>New-York</p>
     </div>
   )
 }

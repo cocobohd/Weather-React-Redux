@@ -1,6 +1,6 @@
 import { CHANGE_DATE, CHANGE_LOCATION } from "./type"
 
-export function changeDate(time, day, month, dayNum, temperature, humidity, cloud, wind_kph, precip_mm, condition) {
+export function changeDate(time, day, month, dayNum, temperature, humidity, cloud, wind_kph, precip_mm, condition, back) {
   return {
     type: CHANGE_DATE,
     time,
@@ -12,7 +12,8 @@ export function changeDate(time, day, month, dayNum, temperature, humidity, clou
     cloud,
     wind_kph,
     precip_mm, 
-    condition
+    condition,
+    back
   }
 }
 
