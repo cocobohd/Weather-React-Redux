@@ -13,6 +13,7 @@ export default function Info () {
 
   function findCity() {
     dispatch(handleChangeLocation(input.current.value))
+    input.current.value = ""
   }
 
   return (

@@ -14,7 +14,12 @@ export default function Weather() {
   async function webApi() {
   const response = await fetch(apiCall)
   const data = await response.json()
-  const time =  data.location.localtime[11] + data.location.localtime[12] + data.location.localtime[13] + data.location.localtime[14] + data.location.localtime[15]
+  const hours = data.location.localtime[11] ? data.location.localtime[11] : ""
+  const hours2 = data.location.localtime[12] ? data.location.localtime[12] : ""
+  const minutes = data.location.localtime[13] ? data.location.localtime[13] : ""
+  const minutes2 = data.location.localtime[14] ? data.location.localtime[14] : ""
+  const wat = data.location.localtime[15] ? data.location.localtime[15] : ""
+  const time = hours + hours2 + minutes + minutes2 + wat
   const day = days[new Date().getDay()]
   const dayNum = parseInt(data.location.localtime[8] + data.location.localtime[9])
   const month = mS[parseInt(data.location.localtime[6] - 1)]
@@ -31,6 +36,8 @@ export default function Weather() {
     back = "https://images.pexels.com/photos/158163/clouds-cloudporn-weather-lookup-158163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   } else if (data.current.condition.text === "Sunny") {
     back = "https://images.pexels.com/photos/912364/pexels-photo-912364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  } else if (data.current.condition.text === "Cloudy") {
+    back = "https://torange.biz/photofxnew/181/HD/light-vivid-colors-fragment-cloudy-sky-181078.jpg"
   } else if (data.current.condition.text === "Moderate rain") {
     back = "https://images.pexels.com/photos/4172579/pexels-photo-4172579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   } else if (data.current.condition.text === "Clear") {
