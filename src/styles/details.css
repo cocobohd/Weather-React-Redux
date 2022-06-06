@@ -17,3 +17,9 @@
 .details--stat {
   color: white;
 }
+
+@media (max-width: 1200px) {
+  .details h3 {
+    font-size: 31px;
+  }
+} 

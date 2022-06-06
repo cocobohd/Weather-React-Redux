@@ -8,12 +8,10 @@
   transition: background 0.7s ease;
   z-index: 1;
 }
-.rain {
-  background-image: url("../imgs/rain.jpg");
-}
-.clouds {
-  background-image: url("../imgs/clouds.jpg");
-}
-.sunny {
-  background-image: url("../imgs/sun.jpg");
+
+@media (max-width: 1200px) {
+  .app {
+    height: 200vh;
+    flex-direction: column;
+  }
 }

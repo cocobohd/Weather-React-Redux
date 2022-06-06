@@ -17,3 +17,13 @@
 .city p:hover {
   color: white;
 }
+
+@media (max-width: 1200px) {
+  .city {
+    flex-direction: column;
+    align-items: center;
+  }
+  .city p {
+    width: 100%;
+  }
+} 

@@ -10,7 +10,7 @@ export default function Weather() {
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const mS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
-  let apiCall = `http://api.weatherapi.com/v1/current.json?key=f2ccb9bcfb884abc96d61924222805&q=${location}&aqi=no`
+  let apiCall = `https://api.weatherapi.com/v1/current.json?key=f2ccb9bcfb884abc96d61924222805&q=${location}&aqi=no`
   async function webApi() {
   const response = await fetch(apiCall)
   const data = await response.json()
@@ -29,7 +29,6 @@ export default function Weather() {
   const wind_kph = data.current.wind_kph
   const precip_mm = data.current.precip_mm
   const condition = data.current.condition.text
-  
   let back = ""
 
   if (data.current.condition.text === "Partly cloudy") {
@@ -40,6 +39,8 @@ export default function Weather() {
     back = "https://torange.biz/photofxnew/181/HD/light-vivid-colors-fragment-cloudy-sky-181078.jpg"
   } else if (data.current.condition.text === "Moderate rain") {
     back = "https://images.pexels.com/photos/4172579/pexels-photo-4172579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  } else if (data.current.condition.text === "Light rain shower") {
+    back = "https://www.dailynews.com/wp-content/uploads/2018/04/ldn-l-weather-rain-dc-11.jpg"
   } else if (data.current.condition.text === "Clear") {
     back = "http://images.gawker.com/h9sqy5i4ohhnympbldoc/c_scale,fl_progressive,q_80,w_800.png"
   } else if (data.current.condition.text === "Moderate or heavy rain with thunder") {
@@ -58,6 +59,8 @@ export default function Weather() {
     back = "https://max.nwstatic.co.uk/newsimages2016/rain/showercloudsatsea.jpg?w=1200"
   } else if (data.current.condition.text === "Light rain") {
     back = "https://www.dailynews.com/wp-content/uploads/2018/04/ldn-l-weather-rain-dc-11.jpg"
+  } else {
+    back = "http://images.gawker.com/h9sqy5i4ohhnympbldoc/c_scale,fl_progressive,q_80,w_800.png"
   }
 
   dispatch(changeDate(time, day, month, dayNum, temperature, humidity, cloud, wind_kph, precip_mm, condition, back))

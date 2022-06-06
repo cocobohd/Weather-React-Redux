@@ -1,6 +1,5 @@
 .info {
   width: 40%;
-  right: -750px;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(12px);
@@ -48,4 +47,17 @@
 .line {
   margin: 50px 0;
   border-top: 2px grey solid;
+}
+
+@media (max-width: 1200px) {
+  .info {
+    right: 0;
+    padding: 50px 25px;
+    width: 100%;
+  }
+  .search--btn {
+    width: 75px;
+    height: 75px;
+    top: 33px;
+  }
 }
