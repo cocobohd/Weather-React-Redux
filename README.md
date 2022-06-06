@@ -1,2 +1,2 @@
 # Weather Site React Redux with getting API
-https://glittery-twilight-391abc.netlify.app/
+https://poetic-tanuki-4c23de.netlify.app/
